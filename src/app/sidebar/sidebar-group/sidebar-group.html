@@ -1,0 +1,12 @@
+<div class="px-2 py-2">
+  <div
+    *ngIf="title && !state.collapsed()"
+    class="px-2 pb-1 text-xs font-medium uppercase tracking-wide"
+    style="color: var(--sidebar-muted)"
+  >
+    {{ title }}
+  </div>
+  <div class="space-y-1">
+    <ng-content />
+  </div>
+</div>

@@ -1,3 +1,59 @@
-<h1 class="text-3xl font-bold">Hello world!</h1>
+<div class="flex h-dvh">
+  <app-sidebar-provider>
+    <app-sidebar>
+      <app-sidebar-header>
+        <div class="flex items-center gap-2">
+          <div class="size-6 rounded bg-black/20"></div>
+          <strong>My App</strong>
+        </div>
+      </app-sidebar-header>
 
-<router-outlet />
+      <app-sidebar-content>
+        <app-sidebar-group title="Main">
+          <!-- Example nav items -->
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 hover:opacity-80"
+            style="background: transparent; color: var(--sidebar-fg)"
+            href="#"
+          >
+            <span aria-hidden="true">🏠</span>
+            <span class="whitespace-nowrap">Home</span>
+          </a>
+
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 hover:opacity-80"
+            style="background: transparent; color: var(--sidebar-fg)"
+            href="#"
+          >
+            <span aria-hidden="true">📄</span>
+            <span class="whitespace-nowrap">Docs</span>
+          </a>
+        </app-sidebar-group>
+
+        <app-sidebar-group title="Projects">
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 hover:opacity-80"
+            style="background: transparent; color: var(--sidebar-fg)"
+            href="#"
+          >
+            <span aria-hidden="true">📦</span>
+            <span class="whitespace-nowrap">Project A</span>
+          </a>
+        </app-sidebar-group>
+      </app-sidebar-content>
+
+      <app-sidebar-footer>
+        <div class="flex items-center justify-between">
+          <span class="text-sm" style="color: var(--sidebar-muted)">v1.0.0</span>
+          <app-sidebar-trigger />
+        </div>
+      </app-sidebar-footer>
+    </app-sidebar>
+
+    <!-- Main content area -->
+    <main class="flex-1 overflow-auto p-6">
+      <h1 class="text-2xl font-semibold mb-4">Content</h1>
+      <p>Your page content goes here.</p>
+    </main>
+  </app-sidebar-provider>
+</div>

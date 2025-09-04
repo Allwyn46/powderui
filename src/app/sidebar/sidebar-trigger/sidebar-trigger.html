@@ -1,0 +1,15 @@
+<button
+  type="button"
+  class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm"
+  style="
+    background: var(--sidebar-accent);
+    border-color: var(--sidebar-border);
+    color: var(--sidebar-fg);
+  "
+  (click)="state.toggle()"
+  [attr.aria-controls]="'app-sidebar'"
+  [attr.aria-expanded]="(!state.collapsed()).toString()"
+>
+  <span aria-hidden="true">☰</span>
+  <span>Toggle</span>
+</button>
