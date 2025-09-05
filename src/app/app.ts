@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SidebarProvider } from './sidebar/sidebar-provider/sidebar-provider';
 import { Sidebar } from './sidebar/sidebar/sidebar';
@@ -8,6 +8,7 @@ import { SidebarContent } from './sidebar/sidebar-content/sidebar-content';
 import { SidebarGroup } from './sidebar/sidebar-group/sidebar-group';
 import { SidebarFooter } from './sidebar/sidebar-footer/sidebar-footer';
 import { SidebarTrigger } from './sidebar/sidebar-trigger/sidebar-trigger';
+import { SidebarState } from './sidebar/sidebar-state';
 
 @Component({
   selector: 'app-root',

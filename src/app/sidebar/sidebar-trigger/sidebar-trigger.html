@@ -1,6 +1,6 @@
 <button
   type="button"
-  class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm"
+  class="inline-flex items-center text-sm"
   style="
     background: var(--sidebar-accent);
     border-color: var(--sidebar-border);
@@ -10,6 +10,8 @@
   [attr.aria-controls]="'app-sidebar'"
   [attr.aria-expanded]="(!state.collapsed()).toString()"
 >
-  <span aria-hidden="true">☰</span>
-  <span>Toggle</span>
+  <span aria-hidden="true">
+    <lucide-icon [img]="Menuicon" class="my-icon"></lucide-icon>
+  </span>
+  <span></span>
 </button>

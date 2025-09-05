@@ -1,6 +1,8 @@
 import { Injectable, effect, signal } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class SidebarState {
   // collapsed = true → icon-only; false → full width
   readonly collapsed = signal(false);
