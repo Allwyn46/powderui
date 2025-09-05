@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SidebarProvider } from './sidebar/sidebar-provider/sidebar-provider';
@@ -23,8 +23,22 @@ import { SidebarState } from './sidebar/sidebar-state';
     SidebarGroup,
     SidebarFooter,
     SidebarTrigger,
+    NgIf,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {}
+export class App {
+  readonly state = inject(SidebarState);
+
+  isDarkMode = false;
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
+}

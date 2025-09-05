@@ -18,23 +18,24 @@
 
 /* Light mode (default) */
 body {
-  background-color: #ffffff;
+  background-color: #fafafa;
   color: #000000;
 }
 
 /* Dark mode */
 .dark-mode {
-  background-color: #121212;
+  background-color: #171717;
   color: #ffffff;
 }
 
 /* Example for components */
-.card {
-  background-color: #f5f5f5;
+.main-content-card {
+  background-color: #ffffff;
   color: #333;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.dark-mode .card {
-  background-color: #1e1e1e;
+.dark-mode .main-content-card {
+  background-color: #0a0a0a;
   color: #ddd;
 }

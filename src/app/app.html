@@ -32,12 +32,14 @@
 
         <app-sidebar-group title="Projects">
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 hover:opacity-80"
+            class="flex items-center rounded-md px-3 py-2 hover:opacity-80"
             style="background: transparent; color: var(--sidebar-fg)"
             href="#"
           >
             <span aria-hidden="true">📦</span>
-            <span class="whitespace-nowrap">Project A</span>
+            <div *ngIf="!state.collapsed()">
+              <span class="ml-3 text-black whitespace-nowrap"> Home </span>
+            </div>
           </a>
         </app-sidebar-group>
       </app-sidebar-content>
@@ -48,14 +50,17 @@
         </div>
       </app-sidebar-footer>
     </app-sidebar>
-    <main class="flex-1 overflow-auto">
-      <app-sidebar-header>
-        <div class="flex items-center gap-2">
+    <main class="flex-1 overflow-auto p-2 rounded-2xl">
+      <div class="bg-slate-400 main-content-card h-full rounded-2xl">
+        <div class="flex items-center gap-2 p-2">
           <app-sidebar-trigger />
+          <button (click)="toggleDarkMode()">Toggle Dark Mode</button>
         </div>
-      </app-sidebar-header>
-      <h1 class="text-2xl font-semibold mb-4">Content</h1>
-      <p>Your page content goes here.</p>
+        <div class="p-6">
+          <h1 class="text-2xl font-semibold mb-4">Content</h1>
+          <p>Your page content goes here.</p>
+        </div>
+      </div>
     </main>
   </div>
 </app-sidebar-provider>
